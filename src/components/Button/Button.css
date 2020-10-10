@@ -1,0 +1,23 @@
+.button {
+  background-color: #08c3fe;
+  height: 80px;
+  width: 95px;
+  border-radius: 5% 5%;
+  font-size: 20px;
+  border-color: #08c3fe;
+  text-align: center;
+}
+
+
+.inputButton {
+  height: 95px;
+  width: 110px;
+  text-align: center;
+  background-color: #DB7093;
+  opacity: 0.6;
+  border-radius: 20px 20px;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0 auto;
+}

@@ -1,0 +1,40 @@
+.list-item {
+  height: 255px;
+  width: 270px;
+  list-style: none;
+  display: inline-grid;
+  border: 2px solid pink;
+  margin: 20px 30px;
+  padding: 50px 20px;
+  border-radius: 5% 5%;
+  font-size: 30px;
+  text-align: center;
+}
+
+li:nth-child(3n+1){
+  background-color: #FFFF00;
+  opacity: 0.6;
+}
+
+li:nth-child(3n+2){
+  background-color: #4B0082;
+  opacity: 0.6;
+}
+
+li:nth-child(3n){
+  background-color: #FF7F00;
+  opacity: 0.6;
+}
+
+
+.list-item:hover {
+  background: rgb(216,237,255);
+  background: linear-gradient(0deg, rgba(216,237,255,1) 0%, rgba(225,245,136,1) 0%, rgba(162,250,55,1) 77%);
+  transition: .4s
+}
+
+
+.list-span {
+  text-decoration: underline;
+  font-size: 25px;
+}
