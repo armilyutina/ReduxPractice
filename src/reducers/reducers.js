@@ -1,23 +1,34 @@
+import playlist from '../INITIAL_STATE';
 import { ADD_TRACK } from '../constants';
-import INITIAL_STATE from '../INITIAL_STATE';
+import { load } from 'redux-localstorage-simple';
 
 
+let Playlist = load({namespace: 'playlist'})
 
-const addTracks = (state=INITIAL_STATE, {type, id, singer, song}) => {
+
+if (!Playlist || !Playlist.playlist || !Playlist.playlist.lenght){
+  Playlist = {
+    playlist: [...playlist],
+  }
+}
+
+
+const tracks = (state=Playlist.playlist, {type, id, inputSinger, inputSong}) => {
   switch (type) {
     case ADD_TRACK:
       return [
         ...state,
         {
           id,
-          singer,
-          song
+          singer: inputSinger,
+          song: inputSong
         }
       ]
-    default: return state;
+    default:
+      return state;
 
   }
 }
 
 
-export default addTracks;
+export default tracks;

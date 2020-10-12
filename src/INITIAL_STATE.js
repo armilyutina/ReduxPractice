@@ -1,4 +1,4 @@
-const INITIAL_STATE = [
+const playlist = [
   {
     id: 0,
     singer: 'Lana Del Rey',
@@ -33,4 +33,4 @@ const INITIAL_STATE = [
 
 
 
-export default INITIAL_STATE;
+export default playlist;

@@ -1,12 +1,12 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import rootReducer from './reducers/index'
-import INITIAL_STATE from './INITIAL_STATE'
-
+import { save } from 'redux-localstorage-simple';
 
 const configureStore = preloadState => (
   createStore(
     rootReducer,
-    preloadState
+    preloadState,
+    applyMiddleware(save({ namespase: 'playlist'}))
   )
 );
 
